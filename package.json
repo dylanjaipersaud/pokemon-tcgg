@@ -1,0 +1,16 @@
+{
+  "name": "pokemon-tcgg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.0.1",
+    "firebase-tools": "^13.22.1",
+    "tesseract.js": "^5.1.1"
+  }
+}

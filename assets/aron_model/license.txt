@@ -1,0 +1,11 @@
+Model Information:
+* title:	Aron
+* source:	https://sketchfab.com/3d-models/aron-9d1f0750919a4c218700802b6aaf3fe8
+* author:	nguyenlouis32 (https://sketchfab.com/nguyenlouis32)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Aron" (https://sketchfab.com/3d-models/aron-9d1f0750919a4c218700802b6aaf3fe8) by nguyenlouis32 (https://sketchfab.com/nguyenlouis32) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
