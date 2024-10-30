@@ -1,8 +1,8 @@
 <!-- import aframe and then ar.js with image tracking / location based features -->
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-<script src="gesture-detector.js"></script>
-<script src="gesture-handler.js"></script>
+<script src="test-drag.js"> </script>
 
 <!-- style for the loader -->
 <style>
@@ -33,153 +33,65 @@
   </div>
 
   <!-- a-frame scene -->
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
-    gesture-detector
-    id="scene"
-  >
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene">
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
-    
+
     <!-- Riolu -->
-    <a-nft
-      type="nft"
-      url="./assets/riolu_imgs/riolu_img"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="15"
-      raycaster="objects: .clickable"
-      emitevents="true"
-      
-    >
+    <a-nft type="nft" url="./assets/riolu_imgs/riolu_img" smooth="true" smoothCount="10" smoothTolerance=".01"
+      smoothThreshold="15">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/riolu_model/scene.gltf"
-        class="clickable"
-        id="riolu"
-        scale="35 35 35"
-        position="125 0 -30"
-        rotation="270 0 0"
-        gesture-handler
-      >
+
+      <a-entity gltf-model="./assets/riolu_model/scene.gltf" class="clickable" id="riolu" scale="35 35 35"
+        position="125 0 -30" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
 
     <!-- Carnivine -->
-    <a-nft
-      type="nft"
-      url="./assets/carnivine_imgs/carnivine_img"
-      smooth="true"
-      smoothCount="5"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      
-    >
-      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/carnivine_model/scene.gltf"
-        class="model"
-        id="carnivine"
-        scale="55 55 35"
-        position="125 0 -50"
-        rotation="270 0 0"
-      >
+    <a-nft type="nft" url="./assets/carnivine_imgs/carnivine_img" smooth="true" smoothCount="5" smoothTolerance=".01"
+      smoothThreshold="5">
+      <a-entity gltf-model="./assets/carnivine_model/scene.gltf" class="model" id="carnivine" scale="55 55 35"
+        position="125 0 -10" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
 
     <!-- Kricketot -->
-    <a-nft
-      type="nft"
-      url="./assets/krick_imgs/krick_img"
-      smooth="true"
-      smoothCount="5"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      
-    >
-      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/kricketot/scene.gltf"
-        class="model"
-        id="kricketot"
-        scale="55 55 35"
-        position="125 0 -50"
-        rotation="270 0 0"
-      >
+    <a-nft type="nft" url="./assets/krick_imgs/krick_img" smooth="true" smoothCount="5" smoothTolerance=".01"
+      smoothThreshold="5">
+      <a-entity gltf-model="./assets/kricketot/scene.gltf" class="model" id="kricketot" scale="55 55 35"
+        position="125 0 -50" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
 
     <!-- Starly -->
-    <a-nft
-      type="nft"
-      url="./assets/starly_imgs/starly_img"
-      smooth="true"
-      smoothCount="5"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      
-    >
-      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/starly_model/scene.gltf"
-        class="model"
-        id="starly"
-        scale="20 20 20"
-        position="125 0 -50"
-        rotation="270 0 0"
-      >
+    <a-nft type="nft" url="./assets/starly_imgs/starly_img" smooth="true" smoothCount="5" smoothTolerance=".01"
+      smoothThreshold="5">
+      <a-entity gltf-model="./assets/starly_model/scene.gltf" class="model" id="starly" scale="20 20 20"
+        position="125 0 -50" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
 
     <!-- Aron -->
-    <a-nft
-      type="nft"
-      url="./assets/aron_imgs/aron_img"
-      smooth="true"
-      smoothCount="5"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      
-    >
-      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/aron_model/scene.gltf"
-        class="model"
-        id="aron"
-        scale="15 15 15"
-        position="125 0 -50"
-        rotation="270 0 0"
-      >
+    <a-nft type="nft" url="./assets/aron_imgs/aron_img" smooth="true" smoothCount="5" smoothTolerance=".01"
+      smoothThreshold="5">
+      <a-entity gltf-model="./assets/aron_model/scene.gltf" class="model" id="aron" scale="15 15 15"
+        position="125 0 -50" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
 
     <!-- Bidoof -->
-    <a-nft
-      type="nft"
-      url="./assets/bidoof_imgs/bidoof_img"
-      smooth="true"
-      smoothCount="5"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      
-    >
-      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity
-        gltf-model="./assets/bidoof_model/scene.gltf"
-        class="model"
-        id="bidoof"
-        scale="5 5 5"
-        position="50 0 -20"
-        rotation="270 0 0"
-      >
+    <a-nft type="nft" url="./assets/bidoof_imgs/bidoof_img" smooth="true" smoothCount="5" smoothTolerance=".01"
+      smoothThreshold="5">
+      <a-entity gltf-model="./assets/bidoof_model/scene.gltf" class="model" id="bidoof" scale="5 5 5"
+        position="50 0 -20" rotation="270 0 0" drag-rotate-component>
       </a-entity>
     </a-nft>
-    <!-- static camera that moves according to the device movemenents -->
+
+    <!-- static camera that moves according to the device movements -->
     <a-entity camera></a-entity>
   </a-scene>
+  <button id="reset-btn">Reset</button>
+
 </body>

@@ -41,7 +41,7 @@ AFRAME.registerComponent("gesture-handler", {
     },
   
     handleRotation: function (event) {
-        console.log("clicked model")
+        // console.log("clicked model")
       if (this.isVisible) {
         this.el.object3D.rotation.y +=
           event.detail.positionChange.x * this.data.rotationFactor;
